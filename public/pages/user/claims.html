@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Claims - Campus Lost &amp; Found</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/polish.css">
+</head>
+<body class="theme-user">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo"><i data-logo></i><span class="logo-text"><small>Campus</small>Lost &amp; Found</span></div>
+
+        <nav class="sidebar-nav" aria-label="Main Navigation">
+            <a href="dashboard.html" class="nav-link"><i data-icon="home"></i><span>Dashboard</span></a>
+            <p class="nav-section">Report</p>
+            <a href="report-lost.html" class="nav-link"><i data-icon="file-plus"></i><span>Report Lost</span></a>
+            <a href="report-found.html" class="nav-link"><i data-icon="search-check"></i><span>Report Found</span></a>
+            <p class="nav-section">Find</p>
+            <a href="browse-found.html" class="nav-link"><i data-icon="search"></i><span>Browse Found</span></a>
+            <p class="nav-section">My activity</p>
+            <a href="my-lost-items.html" class="nav-link"><i data-icon="list"></i><span>Lost Reports</span></a>
+            <a href="my-found-items.html" class="nav-link"><i data-icon="box"></i><span>Found Reports</span></a>
+            <a href="claims.html" class="nav-link active"><i data-icon="shield-check"></i><span>My Claims</span></a>
+            <p class="nav-section">Account</p>
+            <a href="profile.html" class="nav-link"><i data-icon="user"></i><span>Profile</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button type="button" class="nav-link" data-logout><i data-icon="logout"></i><span>Log out</span></button>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="dashboard-main">
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open sidebar menu"><i data-icon="menu"></i></button>
+            </div>
+            <div class="user-profile" role="button" aria-expanded="false" aria-haspopup="true" tabindex="0">
+                <img src="../../assets/img/avatar-ahmed.svg" alt="User Avatar" id="profileAvatar">
+                <div class="user-info">
+                    <span class="user-name">Ahmad Jahanzaib</span>
+                    <span class="user-role">Member</span>
+                </div>
+                <i data-icon="chevron-down"></i>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="page-header">
+                <div class="page-hero">
+                    <div class="page-hero-icon"><i data-icon="shield-check"></i></div>
+                    <div>
+                        <h1>My Claims</h1>
+                        <p>Track the status of your ownership requests. Approved items can be collected from <strong data-collection-point>Campus Security Office</strong> during collection hours (<span data-collection-hours>Mon–Fri, 9:00 AM–4:00 PM</span>).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <div class="table-scroll">
+                    <table class="data-table" aria-label="Submitted claims list">
+                        <thead>
+                            <tr>
+                                <th>Claim ID</th>
+                                <th>Item Details</th>
+                                <th>Found Location</th>
+                                <th>Date Submitted</th>
+                                <th>Verification Status</th>
+                                <th style="text-align: right;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="claimedBody" aria-live="polite">
+                            <!-- Skeleton Row Hydration Before Express/MongoDB payload -->
+                            <tr>
+                                <td colspan="6" style="padding: 0;">
+                                    <div class="skeleton-card" style="border: none; border-radius: 0; box-shadow: none;">
+                                        <div class="sk sk-line w60" style="margin: 12px 20px;"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="../../js/icons.js"></script>
+<script src="../../js/data.js"></script>
+<script src="../../js/campus.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/claimant.js"></script>
+<script src="../../js/motion.js"></script>
+</body>
+</html>

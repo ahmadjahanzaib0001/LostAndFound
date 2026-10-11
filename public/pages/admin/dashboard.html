@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Campus Lost &amp; Found</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/polish.css">
+</head>
+<body class="theme-admin">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo"><i data-logo></i><span class="logo-text"><small>Campus</small>Lost &amp; Found</span></div>
+
+        <div class="sidebar-user">
+            <img src="../../assets/img/avatar-admin.svg" alt="">
+            <div><strong></strong><span>Administrator</span></div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link active"><i data-icon="home"></i><span>Dashboard</span></a>
+            <a href="manage-items.html" class="nav-link"><i data-icon="box"></i><span>Manage Items</span></a>
+            <a href="manage-users.html" class="nav-link"><i data-icon="users"></i><span>Manage Users</span></a>
+            <a href="claims.html" class="nav-link"><i data-icon="shield-check"></i><span>Claims</span></a>
+            <a href="reports.html" class="nav-link"><i data-icon="chart"></i><span>Reports</span></a>
+            <a href="settings.html" class="nav-link"><i data-icon="settings"></i><span>Settings</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button type="button" class="nav-link" data-logout><i data-icon="logout"></i><span>Log out</span></button>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i data-icon="menu"></i></button>
+            </div>
+            <div class="user-profile">
+                <img src="../../assets/img/avatar-admin.svg" alt="">
+                <div class="user-info">
+                    <span class="user-name"></span>
+                    <span class="user-role">Administrator</span>
+                </div>
+                <i data-icon="chevron-down"></i>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="page-header">
+                <h1>Welcome 👋</h1>
+                <p>Here's an overview of the system.</p>
+            </div>
+
+            <div class="stats-grid cols-4">
+                <a class="stat-card" href="manage-items.html?type=lost">
+                    <div class="stat-icon blue"><i data-icon="file-text"></i></div>
+                    <div class="stat-info"><h3>&ndash;</h3><p>Total Lost Items</p></div>
+                </a>
+                <a class="stat-card" href="manage-items.html?type=found">
+                    <div class="stat-icon green"><i data-icon="check"></i></div>
+                    <div class="stat-info"><h3>&ndash;</h3><p>Total Found Items</p></div>
+                </a>
+                <a class="stat-card" href="claims.html">
+                    <div class="stat-icon purple"><i data-icon="shield-check"></i></div>
+                    <div class="stat-info"><h3>&ndash;</h3><p>Items Returned</p></div>
+                </a>
+                <a class="stat-card" href="manage-users.html">
+                    <div class="stat-icon orange"><i data-icon="users"></i></div>
+                    <div class="stat-info"><h3>&ndash;</h3><p>Total Users</p></div>
+                </a>
+            </div>
+
+            <div class="admin-grid">
+                <div class="content-card chart-card">
+                    <div class="chart-head">
+                        <h2>Items Overview</h2>
+                        <div class="legend"><span><i style="background:#2B55E6"></i>Lost Items</span><span><i style="background:#12805C"></i>Found Items</span></div>
+                    </div>
+                    <div id="overviewChart"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="../../js/icons.js"></script>
+<script src="../../js/data.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/admin.js"></script>
+<script src="../../js/dashboard.js"></script>
+<script src="../../js/motion.js"></script>
+</body>
+</html>

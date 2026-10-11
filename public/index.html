@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost &amp; Found - get your belongings back</title>
+    <meta name="description" content="Lost something on campus? Report it, browse what has been handed in, and claim it with proof. Every claim is checked by an admin.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="css/polish.css">
+</head>
+<body class="landing">
+
+<header class="nav" id="nav">
+    <div class="nav-inner">
+        <a href="#home" class="brand"><i data-logo></i>Campus Lost &amp; Found</a>
+        <nav class="nav-links" id="navLinks" aria-label="Main">
+            <a href="#home" class="active">Home</a>
+            <a href="#found">Found items</a>
+            <a href="#how">How it works</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="pages/login.html" class="btn btn-outline btn-sm">Log in</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu"><i data-icon="menu"></i></button>
+    </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <span class="eyebrow"><i data-icon="map-pin"></i>For students, faculty and staff</span>
+            <h1>Lost something on campus? Let&rsquo;s get it back to you.</h1>
+            <p class="lead">Report a lost item, browse belongings handed in by others, and submit a claim with proof. An administrator reviews every claim before an item is returned.</p>
+            <div class="hero-cta">
+                <a href="pages/register.html?next=%2Fpages%2Fuser%2Freport-lost.html" class="btn btn-blue btn-lg">Report a lost item</a>
+                <a href="pages/found-items.html" class="btn btn-outline btn-lg">Browse found items</a>
+            </div>
+            <ul class="hero-facts">
+                <li><span class="fact-icon"><i data-icon="clock"></i></span>Reports take about a minute</li>
+                <li><span class="fact-icon"><i data-icon="shield-check"></i></span>Every claim checked by an admin</li>
+                <li><span class="fact-icon"><i data-icon="mail"></i></span>Email updates at each step</li>
+            </ul>
+        </div>
+
+        <div class="hero-art" aria-hidden="true">
+            <div class="tag-wrap">
+                <div class="tag-string"></div>
+                <div class="tag">
+                    <div class="tag-photo"><svg viewBox="0 0 240 240" role="img" aria-label="Backpack with a student ID card and keys" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bag" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3D67F0"/><stop offset="1" stop-color="#1F3FB5"/></linearGradient>
+    <linearGradient id="pocket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2B55E6"/><stop offset="1" stop-color="#1B38A6"/></linearGradient>
+  </defs>
+  <path d="M34 150c-18-38 6-98 52-108 38-9 86 2 104 40 17 36 6 92-34 108-40 15-104 4-122-40z" fill="#EDF1FE"/>
+  <ellipse cx="116" cy="206" rx="62" ry="8" fill="#0B1B36" opacity=".1"/>
+  <path d="M88 62c0-20 12-32 28-32s28 12 28 32" fill="none" stroke="#1B2E52" stroke-width="9" stroke-linecap="round"/>
+  <rect x="66" y="56" width="100" height="144" rx="34" fill="url(#bag)"/>
+  <path d="M72 96h88" stroke="#fff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round"/>
+  <rect x="80" y="118" width="72" height="62" rx="16" fill="url(#pocket)"/>
+  <rect x="92" y="130" width="48" height="6" rx="3" fill="#F5A524"/>
+  <rect x="98" y="150" width="36" height="14" rx="7" fill="#1B2E52" opacity=".55"/>
+  <rect x="60" y="100" width="8" height="64" rx="4" fill="#1B2E52"/>
+  <rect x="164" y="100" width="8" height="64" rx="4" fill="#1B2E52"/>
+  <g transform="rotate(8 190 150)">
+    <rect x="168" y="112" width="52" height="68" rx="9" fill="#fff" stroke="#D3DAE6"/>
+    <rect x="168" y="112" width="52" height="16" rx="9" fill="#F5A524"/>
+    <circle cx="194" cy="146" r="10" fill="#DAE3FD"/><path d="M178 172c2-9 8-12 16-12s14 3 16 12z" fill="#DAE3FD"/>
+    <rect x="178" y="118" width="32" height="4" rx="2" fill="#fff" opacity=".8"/>
+  </g>
+  <g transform="rotate(-18 54 176)">
+    <circle cx="44" cy="176" r="9" fill="none" stroke="#F5A524" stroke-width="4"/>
+    <rect x="52" y="172" width="34" height="8" rx="4" fill="#F5A524"/><rect x="72" y="180" width="5" height="9" rx="2" fill="#F5A524"/><rect x="80" y="180" width="5" height="12" rx="2" fill="#F5A524"/>
+  </g>
+</svg></div>
+                    <div class="tag-title">Black backpack</div>
+                    <div class="tag-line"></div>
+                    <div class="tag-meta"><span><i data-icon="map-pin"></i>Main Library</span><span><i data-icon="calendar"></i>Handed in today</span></div>
+                </div>
+            </div>
+            <div class="chip chip-a"><i><svg class="icon" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></svg></i>Claim approved</div>
+            <div class="chip chip-b"><i><svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></i>3 possible matches</div>
+        </div>
+    </div>
+</section>
+
+<section class="section tint" id="found">
+    <div class="container">
+        <div class="section-row reveal">
+            <div class="section-head">
+                <h2>Recently handed in</h2>
+                <p>Explore recently reported found items. You can browse without creating an account.</p>
+            </div>
+            <a class="link-arrow" href="pages/found-items.html">See all found items <i data-icon="arrow-right"></i></a>
+        </div>
+        <div class="pub-grid" id="recentFound" aria-live="polite">
+            <div class="pub-skel"></div><div class="pub-skel"></div><div class="pub-skel"></div><div class="pub-skel"></div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="how">
+    <div class="container">
+        <div class="section-head reveal">
+            <h2>From missing to back in your hands</h2>
+            <p>Four simple steps. Follow your reports and claims from your dashboard.</p>
+        </div>
+        <div class="steps reveal">
+            <div class="step"><div class="step-n">1</div><h3>Create an account</h3><p>Sign up with your university email and confirm it with a 6-digit code.</p></div>
+            <div class="step"><div class="step-n">2</div><h3>Report or browse</h3><p>Describe what you lost with a photo, or look through what has been found.</p></div>
+            <div class="step"><div class="step-n">3</div><h3>Claim with proof</h3><p>Share a detail only the owner would know. An administrator will review your claim.</p></div>
+            <div class="step"><div class="step-n">4</div><h3>Collect it</h3><p>When your claim is approved, you’ll receive an email with collection instructions for <span data-collection-point>the collection point</span>.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="section tint" id="about">
+    <div class="container">
+        <div class="section-head reveal">
+            <h2>One account for both sides</h2>
+            <p>Anyone can report what they lost and what they found. You don&rsquo;t need to pick a role.</p>
+        </div>
+        <div class="sides">
+            <article class="side reveal">
+                <h3>If you lost something</h3>
+                <ul>
+                    <li><i data-icon="check"></i>Report it with a photo and where you last saw it</li>
+                    <li><i data-icon="check"></i>See possible matches from items that were found</li>
+                    <li><i data-icon="check"></i>Track every claim in one place</li>
+                </ul>
+            </article>
+            <article class="side reveal">
+                <h3>If you found something</h3>
+                <ul>
+                    <li><i data-icon="check"></i>Add a photo and where you found it</li>
+                    <li><i data-icon="check"></i>Get an email when someone claims it</li>
+                    <li><i data-icon="check"></i>Know when it has gone back to its owner</li>
+                </ul>
+            </article>
+        </div>
+
+        <div class="collect reveal">
+            <div class="collect-main">
+                <span class="fact-icon"><i data-icon="map-pin"></i></span>
+                <div>
+                    <h3>Where to collect your item</h3>
+                    <p>Once an admin approves your claim, pick the item up in person.</p>
+                </div>
+            </div>
+            <dl class="collect-facts">
+                <div><dt>Where</dt><dd data-collection-point>Campus Security Office</dd></div>
+                <div><dt>When</dt><dd data-collection-hours>Mon-Fri, 9:00 AM - 4:00 PM</dd></div>
+                <div><dt>Bring</dt><dd>Your university ID card</dd></div>
+            </dl>
+        </div>
+
+        <div class="admin-strip reveal">
+            <i data-icon="lock"></i>
+            <div>
+                <h3>Handled by an admin team</h3>
+                <p>Admins compare each claim with the real description, manage items and users, and export reports.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="faq">
+    <div class="container faq-wrap">
+        <div class="section-head reveal">
+            <h2>Good to know</h2>
+            <p>Quick answers before you start.</p>
+        </div>
+        <div class="faq reveal">
+            <details><summary>Who can use Campus Lost &amp; Found?</summary><p>Anyone from the campus community. You sign up with your university email and confirm it with a 6-digit code.</p></details>
+            <details><summary>I found something. What should I do?</summary><p>Use <strong>Report Found</strong> to add a photo and where you found it, then hand the item in at <span data-collection-point>the collection point</span> so it can be returned safely.</p></details>
+            <details><summary>How do I prove an item is mine?</summary><p>When you claim an item, describe something only the owner would know, such as marks, contents or a serial number. The public list never shows the full description, so claims can be checked fairly.</p></details>
+            <details><summary>What happens after I send a claim?</summary><p>An admin compares your proof with the real description. You get an email whether the claim is approved or not, and you can send a new claim with more details if needed.</p></details>
+        </div>
+    </div>
+</section>
+
+<section class="section tint" id="contact">
+    <div class="container contact">
+        <div class="reveal">
+            <h2>Questions about an item or your account?</h2>
+            <p>Write to the Campus Lost &amp; Found team and include the item name and where it was lost or found. You can also log in to follow your reports and claims.</p>
+        </div>
+        <a class="mail-card reveal" href="mailto:lost.and.found.official.uet@gmail.com">
+            <span class="fact-icon"><i data-icon="mail"></i></span>
+            <div><strong>Email the team</strong><span>lost.and.found.official.uet@gmail.com</span></div>
+        </a>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <a href="#home" class="brand"><i data-logo></i>Campus Lost &amp; Found</a>
+        <nav aria-label="Footer"><a href="pages/found-items.html">Found items</a><a href="#contact">Contact</a></nav>
+        <span>&copy; 2026 Campus Lost &amp; Found</span>
+    </div>
+</footer>
+
+<script src="js/icons.js"></script>
+<script src="js/campus.js"></script>
+<script src="js/main.js"></script>
+<script src="js/public.js"></script>
+<script src="js/motion.js"></script>
+</body>
+</html>

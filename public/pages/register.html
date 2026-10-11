@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Campus Lost &amp; Found</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/auth.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/polish.css">
+</head>
+<body>
+<div class="auth-page">
+    <div class="auth-brand">
+        <a href="../index.html">
+            <i data-logo></i>
+            <h2>Campus Lost &amp; Found</h2>
+            <p>Lost it on campus? Find it here.</p>
+        </a>
+    <ul class="auth-points">
+        <li><i data-icon="shield-check"></i>Every claim reviewed by an admin</li>
+        <li><i data-icon="mail"></i>Email updates at each step</li>
+        <li><i data-icon="lock"></i>Verified campus accounts</li>
+    </ul>
+    </div>
+    <div class="auth-side">
+        <div class="auth-card" style="max-width:440px">
+
+            <!-- STEP 1: details -->
+            <div id="step1">
+                <h1>Create Your Account</h1>
+                <p class="sub">Join your campus Lost &amp; Found</p>
+                <div class="form-error" id="formError"></div>
+                <form id="registerForm" novalidate>
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <div class="input-wrap"><i data-icon="user"></i><input class="form-control" type="text" name="fullname" placeholder="Enter your full name"></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <div class="input-wrap"><i data-icon="mail"></i><input class="form-control" type="email" name="email" placeholder="Enter your email"></div>
+                        <p class="field-hint" id="domainHint" hidden></p>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <div class="input-wrap"><i data-icon="lock"></i><input class="form-control has-toggle" type="password" name="password" placeholder="Create a password"><button type="button" class="toggle-pass" aria-label="Show password"><i data-icon="eye"></i></button></div>
+                    </div>
+                    <button type="submit" class="btn btn-blue">Register</button>
+                </form>
+                <p class="auth-foot">Already have an account? <a href="login.html" id="loginLink">Login</a></p>
+            </div>
+
+            <!-- STEP 2: verification code -->
+            <div id="step2" hidden>
+                <h1>Verify Your Email</h1>
+                <p class="sub">We sent a 6-digit code to <strong id="sentTo"></strong>. It expires in 10 minutes.</p>
+                <div class="form-error" id="verifyError"></div>
+                <form id="verifyForm" novalidate>
+                    <div class="form-group">
+                        <label class="form-label">Verification Code</label>
+                        <input class="form-control code-input" type="text" name="code" inputmode="numeric" maxlength="6" placeholder="000000" autocomplete="one-time-code">
+                    </div>
+                    <button type="submit" class="btn btn-blue">Verify &amp; Create Account</button>
+                </form>
+                <div class="verify-actions">
+                    <button type="button" class="link-btn" id="resendBtn">Resend code</button>
+                    <button type="button" class="link-btn" id="changeEmailBtn">Change email</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="../js/icons.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/auth.js"></script>
+</body>
+</html>

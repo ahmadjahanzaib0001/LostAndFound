@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Found Items - Campus Lost &amp; Found</title>
+    <meta name="description" content="Items that have been handed in on campus and are waiting for their owners.">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <link rel="stylesheet" href="../css/polish.css">
+</head>
+<body class="landing">
+
+<header class="nav scrolled" id="nav">
+    <div class="nav-inner">
+        <a href="../index.html" class="brand"><i data-logo></i>Campus Lost &amp; Found</a>
+        <nav class="nav-links" id="navLinks" aria-label="Main">
+            <a href="../index.html">Home</a>
+            <a href="found-items.html" class="active">Found items</a>
+            <a href="../index.html#how">How it works</a>
+            <a href="../index.html#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu"><i data-icon="menu"></i></button>
+    </div>
+</header>
+
+<main>
+<section class="page-top">
+    <div class="container">
+        <h1>Found items</h1>
+        <p class="lead">Browse items that have been handed in and are waiting to be reunited with their owners. See something familiar? Sign in and submit a claim with proof.</p>
+        <div class="pub-toolbar">
+            <div class="pub-search"><i data-icon="search"></i><input id="pubSearch" type="search" placeholder="Search by name or place, e.g. wallet, library" aria-label="Search found items"></div>
+            <select class="form-control" id="pubCat" data-categories data-all aria-label="Category"></select>
+            <span class="pub-count" id="pubCount" aria-live="polite"></span>
+        </div>
+    </div>
+</section>
+
+<section class="section tint pub-section">
+    <div class="container">
+        <div class="pub-grid" id="pubGrid" aria-live="polite">
+            <div class="pub-skel"></div><div class="pub-skel"></div><div class="pub-skel"></div><div class="pub-skel"></div>
+        </div>
+        <div class="pub-cta">
+            <div><h3>Can&rsquo;t see your item?</h3><p>Can’t find a match? Submit a lost-item report and check back for possible matches as new items are reported.</p></div>
+            <a href="register.html?next=%2Fpages%2Fuser%2Freport-lost.html" class="btn btn-blue">Report a lost item</a>
+        </div>
+    </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <a href="../index.html" class="brand"><i data-logo></i>Campus Lost &amp; Found</a>
+        <nav aria-label="Footer"><a href="../index.html">Home</a><a href="../index.html#contact">Contact</a></nav>
+        <span>&copy; 2026 Campus Lost &amp; Found</span>
+    </div>
+</footer>
+
+<script src="../js/icons.js"></script>
+<script src="../js/campus.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/public.js"></script>
+<script src="../js/motion.js"></script>
+</body>
+</html>

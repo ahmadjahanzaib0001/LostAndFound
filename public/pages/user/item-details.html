@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details - Campus Lost &amp; Found</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/polish.css">
+</head>
+<body class="theme-user">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo"><i data-logo></i><span class="logo-text"><small>Campus</small>Lost &amp; Found</span></div>
+
+        <nav class="sidebar-nav" aria-label="Main">
+            <a href="dashboard.html" class="nav-link"><i data-icon="home"></i><span>Dashboard</span></a>
+            <p class="nav-section">Report</p>
+            <a href="report-lost.html" class="nav-link"><i data-icon="file-plus"></i><span>Report Lost</span></a>
+            <a href="report-found.html" class="nav-link"><i data-icon="search-check"></i><span>Report Found</span></a>
+            <p class="nav-section">Find</p>
+            <a href="browse-found.html" class="nav-link"><i data-icon="search"></i><span>Browse Found</span></a>
+            <p class="nav-section">My activity</p>
+            <a href="my-lost-items.html" class="nav-link active"><i data-icon="list"></i><span>Lost Reports</span></a>
+            <a href="my-found-items.html" class="nav-link"><i data-icon="box"></i><span>Found Reports</span></a>
+            <a href="claims.html" class="nav-link"><i data-icon="shield-check"></i><span>My Claims</span></a>
+            <p class="nav-section">Account</p>
+            <a href="profile.html" class="nav-link"><i data-icon="user"></i><span>Profile</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button type="button" class="nav-link" data-logout><i data-icon="logout"></i><span>Log out</span></button>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i data-icon="menu"></i></button>
+            </div>
+            <div class="user-profile">
+                <img src="../../assets/img/avatar-ahmed.svg" alt="">
+                <div class="user-info">
+                    <span class="user-name"></span>
+                    <span class="user-role">Member</span>
+                </div>
+                <i data-icon="chevron-down"></i>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+            <div class="breadcrumb"><a id="crumbList" href="my-lost-items.html">My Items</a><i data-icon="chevron-right"></i><strong>Item Details</strong></div>
+
+            <div class="detail-card" id="itemDetail">
+                <div class="detail-image"><img id="detailImg" alt=""></div>
+                <div class="detail-body">
+                    <div class="detail-title"><h2 id="detailName"></h2><span class="status" id="detailStatus"></span></div>
+                    <div class="detail-row"><i data-icon="box"></i><span class="label">Category</span><span class="value" id="detailCategory"></span></div>
+                    <div class="detail-row"><i data-icon="calendar"></i><span class="label" id="detailDateLabel">Date</span><span class="value" id="detailDate"></span></div>
+                    <div class="detail-row"><i data-icon="map-pin"></i><span class="label">Location</span><span class="value" id="detailLoc"></span></div>
+                    <div class="detail-row"><i data-icon="file-text"></i><span class="label">Description</span><span class="value" id="detailDesc"></span></div>
+                </div>
+            </div>
+
+            <div class="info-box" style="margin-top:18px"><i data-icon="info"></i><span id="statusInfo"></span></div>
+            <div class="detail-actions">
+                <a class="btn btn-blue" id="btnEdit" href="#" hidden>Edit</a>
+                <button class="btn btn-outline" id="btnResolve" hidden>I found it myself</button>
+                <button class="btn btn-danger" id="btnDelete" hidden>Delete</button>
+                <a class="btn btn-outline" id="btnBack" href="my-lost-items.html">Back to List</a>
+            </div>
+
+            <div id="matchesSection" hidden>
+                <h2 class="section-title">Possible matches</h2>
+                <p style="margin:-6px 0 14px;font-size:13px">Similar found items appear here. If you recognize your belonging, open it in Browse Found and submit a claim.</p>
+                <div class="item-grid" id="matchGrid"></div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="../../js/icons.js"></script>
+<script src="../../js/data.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/claimant.js"></script>
+<script src="../../js/motion.js"></script>
+</body>
+</html>

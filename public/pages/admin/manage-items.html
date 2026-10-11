@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Items - Campus Lost &amp; Found</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/polish.css">
+</head>
+<body class="theme-admin">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo"><i data-logo></i><span class="logo-text"><small>Campus</small>Lost &amp; Found</span></div>
+
+        <div class="sidebar-user">
+            <img src="../../assets/img/avatar-admin.svg" alt="">
+            <div><strong></strong><span>Administrator</span></div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link"><i data-icon="home"></i><span>Dashboard</span></a>
+            <a href="manage-items.html" class="nav-link active"><i data-icon="box"></i><span>Manage Items</span></a>
+            <a href="manage-users.html" class="nav-link"><i data-icon="users"></i><span>Manage Users</span></a>
+            <a href="claims.html" class="nav-link"><i data-icon="shield-check"></i><span>Claims</span></a>
+            <a href="reports.html" class="nav-link"><i data-icon="chart"></i><span>Reports</span></a>
+            <a href="settings.html" class="nav-link"><i data-icon="settings"></i><span>Settings</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button type="button" class="nav-link" data-logout><i data-icon="logout"></i><span>Log out</span></button>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i data-icon="menu"></i></button>
+            </div>
+            <div class="user-profile">
+                <img src="../../assets/img/avatar-admin.svg" alt="">
+                <div class="user-info">
+                    <span class="user-name"></span>
+                    <span class="user-role">Administrator</span>
+                </div>
+                <i data-icon="chevron-down"></i>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+
+            <h1 style="font-size:22px;color:var(--ink);margin-bottom:16px">Manage Items</h1>
+
+            <div class="tabs-row">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="lost">Lost Items</button>
+                    <button class="tab-btn" data-tab="found">Found Items</button>
+                </div>
+                <button class="btn btn-purple btn-sm" id="addItemBtn">Add Item</button>
+            </div>
+
+            <div class="toolbar" style="display:flex;gap:12px;flex-wrap:wrap"><div class="search-box" style="flex:1;min-width:220px"><i data-icon="search"></i><input type="text" id="itemSearch" placeholder="Search items..."></div><select class="form-control" id="itemStatusFilter" style="width:170px"><option value="">All statuses</option><option>Pending</option><option>In Review</option><option>Claimed</option><option>Resolved</option></select><select class="form-control" id="itemCatFilter" style="width:190px" data-categories data-all></select></div>
+
+            <div class="table-card"><div class="table-scroll">
+                <table class="data-table">
+                    <thead><tr><th>ID</th><th>Item</th><th>Category</th><th>Location</th><th>Date</th><th>Status</th><th>Actions</th></tr></thead>
+                    <tbody id="itemsBody"></tbody>
+                </table>
+            </div></div>
+        </section>
+
+    </main>
+</div>
+
+<script src="../../js/icons.js"></script>
+<script src="../../js/data.js"></script>
+<script src="../../js/campus.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/admin.js"></script>
+<script src="../../js/motion.js"></script>
+</body>
+</html>

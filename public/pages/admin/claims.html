@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claims - Campus Lost &amp; Found</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/polish.css">
+</head>
+<body class="theme-admin">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo"><i data-logo></i><span class="logo-text"><small>Campus</small>Lost &amp; Found</span></div>
+
+        <div class="sidebar-user">
+            <img src="../../assets/img/avatar-admin.svg" alt="">
+            <div><strong></strong><span>Administrator</span></div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link"><i data-icon="home"></i><span>Dashboard</span></a>
+            <a href="manage-items.html" class="nav-link"><i data-icon="box"></i><span>Manage Items</span></a>
+            <a href="manage-users.html" class="nav-link"><i data-icon="users"></i><span>Manage Users</span></a>
+            <a href="claims.html" class="nav-link active"><i data-icon="shield-check"></i><span>Claims</span></a>
+            <a href="reports.html" class="nav-link"><i data-icon="chart"></i><span>Reports</span></a>
+            <a href="settings.html" class="nav-link"><i data-icon="settings"></i><span>Settings</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button type="button" class="nav-link" data-logout><i data-icon="logout"></i><span>Log out</span></button>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i data-icon="menu"></i></button>
+            </div>
+            <div class="user-profile">
+                <img src="../../assets/img/avatar-admin.svg" alt="">
+                <div class="user-info">
+                    <span class="user-name"></span>
+                    <span class="user-role">Administrator</span>
+                </div>
+                <i data-icon="chevron-down"></i>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+
+            <div class="page-header">
+                <h1>Claims</h1>
+                <p>Review ownership evidence carefully, then approve or reject each claim so belongings can be returned safely.</p>
+            </div>
+            <div class="toolbar"><select class="form-control" id="claimFilter" style="width:190px"><option value="">All claims</option><option>Pending</option><option>Approved</option><option>Rejected</option></select></div>
+            <div class="table-card"><div class="table-scroll">
+                <table class="data-table">
+                    <thead><tr><th>ID</th><th>Item</th><th>Claimant</th><th>Proof</th><th>Date</th><th>Status</th><th>Action</th></tr></thead>
+                    <tbody id="claimsBody"></tbody>
+                </table>
+            </div></div>
+        </section>
+
+    </main>
+</div>
+
+<script src="../../js/icons.js"></script>
+<script src="../../js/data.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/admin.js"></script>
+<script src="../../js/motion.js"></script>
+</body>
+</html>

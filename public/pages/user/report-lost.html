@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Lost Item - Campus Lost &amp; Found</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/polish.css">
+</head>
+<body class="theme-user">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo"><i data-logo></i><span class="logo-text"><small>Campus</small>Lost &amp; Found</span></div>
+
+        <nav class="sidebar-nav" aria-label="Main">
+            <a href="dashboard.html" class="nav-link"><i data-icon="home"></i><span>Dashboard</span></a>
+            <p class="nav-section">Report</p>
+            <a href="report-lost.html" class="nav-link active"><i data-icon="file-plus"></i><span>Report Lost</span></a>
+            <a href="report-found.html" class="nav-link"><i data-icon="search-check"></i><span>Report Found</span></a>
+            <p class="nav-section">Find</p>
+            <a href="browse-found.html" class="nav-link"><i data-icon="search"></i><span>Browse Found</span></a>
+            <p class="nav-section">My activity</p>
+            <a href="my-lost-items.html" class="nav-link"><i data-icon="list"></i><span>Lost Reports</span></a>
+            <a href="my-found-items.html" class="nav-link"><i data-icon="box"></i><span>Found Reports</span></a>
+            <a href="claims.html" class="nav-link"><i data-icon="shield-check"></i><span>My Claims</span></a>
+            <p class="nav-section">Account</p>
+            <a href="profile.html" class="nav-link"><i data-icon="user"></i><span>Profile</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button type="button" class="nav-link" data-logout><i data-icon="logout"></i><span>Log out</span></button>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i data-icon="menu"></i></button>
+            </div>
+            <div class="user-profile">
+                <img src="../../assets/img/avatar-ahmed.svg" alt="">
+                <div class="user-info">
+                    <span class="user-name"></span>
+                    <span class="user-role">Member</span>
+                </div>
+                <i data-icon="chevron-down"></i>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+            <form class="form-card" id="itemForm" data-type="lost" data-redirect="my-lost-items.html">
+                <h1>Report Lost Item</h1>
+                <p class="sub">Share as many accurate details as you can so others can identify the item and help you recover it.</p>
+
+                <div class="form-group">
+                    <label class="form-label">Item Name <span class="req">*</span></label>
+                    <input class="form-control" type="text" placeholder="e.g. Black Wallet" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Category <span class="req">*</span></label>
+                    <select class="form-control" data-categories required></select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Location Lost <span class="req">*</span></label>
+                    <div data-location-field data-required></div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Date Lost <span class="req">*</span></label>
+                    <input class="form-control" type="date" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Description <span class="req">*</span></label>
+                    <textarea class="form-control" rows="4" placeholder="Describe the item in detail..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Upload Image</label>
+                    <input class="form-control" type="file" accept="image/*">
+                </div>
+                <button type="submit" class="btn btn-blue btn-submit">Submit</button>
+            </form>
+        </section>
+
+    </main>
+</div>
+
+<script src="../../js/icons.js"></script>
+<script src="../../js/data.js"></script>
+<script src="../../js/campus.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/motion.js"></script>
+</body>
+</html>

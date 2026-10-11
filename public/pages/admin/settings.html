@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Campus Lost &amp; Found</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/polish.css">
+</head>
+<body class="theme-admin">
+
+<div class="dashboard-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo"><i data-logo></i><span class="logo-text"><small>Campus</small>Lost &amp; Found</span></div>
+
+        <div class="sidebar-user">
+            <img src="../../assets/img/avatar-admin.svg" alt="">
+            <div><strong></strong><span>Administrator</span></div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-link"><i data-icon="home"></i><span>Dashboard</span></a>
+            <a href="manage-items.html" class="nav-link"><i data-icon="box"></i><span>Manage Items</span></a>
+            <a href="manage-users.html" class="nav-link"><i data-icon="users"></i><span>Manage Users</span></a>
+            <a href="claims.html" class="nav-link"><i data-icon="shield-check"></i><span>Claims</span></a>
+            <a href="reports.html" class="nav-link"><i data-icon="chart"></i><span>Reports</span></a>
+            <a href="settings.html" class="nav-link active"><i data-icon="settings"></i><span>Settings</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button type="button" class="nav-link" data-logout><i data-icon="logout"></i><span>Log out</span></button>
+        </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="dashboard-main">
+
+        <header class="topbar">
+            <div class="topbar-left">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu"><i data-icon="menu"></i></button>
+            </div>
+            <div class="user-profile">
+                <img src="../../assets/img/avatar-admin.svg" alt="">
+                <div class="user-info">
+                    <span class="user-name"></span>
+                    <span class="user-role">Administrator</span>
+                </div>
+                <i data-icon="chevron-down"></i>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+            <div class="page-header"><h1>Settings</h1><p>Manage administrator account details, password security, and sign-in protection.</p></div>
+            <form class="form-card" id="profileForm">
+                <div class="profile-head">
+                    <img id="profileAvatar" src="../../assets/img/avatar-admin.svg" alt="">
+                    <div>
+                        <h2 data-fill="name"></h2><p>Administrator</p>
+                        <div class="avatar-actions">
+                            <label class="btn btn-outline btn-sm" for="avatarInput">Change photo</label>
+                            <input type="file" id="avatarInput" accept="image/*" hidden>
+                            <button type="button" class="btn btn-sm btn-danger" id="avatarRemove" hidden>Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-grid">
+                    <div class="form-group"><label class="form-label">Full Name</label><input class="form-control" type="text" name="name" data-fill="name" maxlength="60" required></div>
+                    <div class="form-group"><label class="form-label">Email</label><input class="form-control" type="email" data-fill="email" disabled></div>
+                    <div class="form-group"><label class="form-label">Phone</label><input class="form-control" type="tel" name="phone" data-fill="phone" maxlength="20" placeholder="+92 300 0000000"></div>
+                </div>
+                <button type="submit" class="btn btn-purple btn-submit" style="max-width:220px">Save Changes</button>
+            </form>
+
+            <form class="form-card" id="passwordForm" style="margin-top:20px">
+                <h1 style="font-size:17px;margin-bottom:16px">Change Password</h1>
+                <div class="form-grid">
+                    <div class="form-group"><label class="form-label">Current Password</label><input class="form-control" type="password" name="currentPassword" autocomplete="current-password" required></div>
+                    <div></div>
+                    <div class="form-group"><label class="form-label">New Password</label><input class="form-control" type="password" name="newPassword" autocomplete="new-password" required></div>
+                    <div class="form-group"><label class="form-label">Confirm New Password</label><input class="form-control" type="password" name="confirmPassword" autocomplete="new-password" required></div>
+                </div>
+                <button type="submit" class="btn btn-purple btn-submit" style="max-width:220px">Update Password</button>
+            </form>
+
+            <div class="form-card" id="twoFaCard" style="margin-top:20px">
+                <h1 style="font-size:17px;margin-bottom:14px">Two-Factor Authentication</h1>
+                <div id="twoFaBody"><p class="tf-text">Loading...</p></div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="../../js/icons.js"></script>
+<script src="../../js/data.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/profile.js"></script>
+<script src="../../js/twofa.js"></script>
+<script src="../../js/motion.js"></script>
+</body>
+</html>

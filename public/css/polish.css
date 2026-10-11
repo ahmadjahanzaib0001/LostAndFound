@@ -1,0 +1,143 @@
+/* =====================================================================
+   CAMPUS LOST & FOUND — visual refinement layer
+   Loaded after existing styles so the original page structure and
+   application behavior remain untouched.
+   ===================================================================== */
+:root {
+    --r-sm: 9px;
+    --r-md: 12px;
+    --r-lg: 17px;
+    --r-xl: 23px;
+    --sh-1: 0 1px 2px rgb(11 27 54 / .035), 0 2px 8px rgb(11 27 54 / .035);
+    --sh-2: 0 8px 24px -14px rgb(11 27 54 / .24), 0 2px 5px rgb(11 27 54 / .04);
+    --sh-3: 0 24px 60px -28px rgb(11 27 54 / .34), 0 8px 20px -12px rgb(11 27 54 / .12);
+}
+
+html { scroll-padding-top: 84px; }
+body { letter-spacing: -.006em; }
+::placeholder { opacity: 1; }
+
+/* Better keyboard visibility and more comfortable touch targets */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+    outline: 3px solid color-mix(in srgb, var(--accent, var(--brand)) 55%, white);
+    outline-offset: 3px;
+}
+button, .btn, a { -webkit-tap-highlight-color: transparent; }
+.btn { border-radius: 11px; }
+.btn-outline { box-shadow: 0 1px 1px rgb(11 27 54 / .025); }
+
+/* Forms: clearer labels, calmer surfaces, consistent disabled states */
+.form-label { letter-spacing: -.01em; }
+.form-control { border-radius: 11px; }
+.form-control:focus { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent, var(--brand)) 12%, transparent); }
+.form-control:disabled { opacity: .78; }
+
+/* Public landing page */
+body.landing {
+    background:
+        radial-gradient(ellipse at 12% 38%, rgba(239, 183, 111, .38), transparent 38%),
+        radial-gradient(ellipse at 84% 22%, rgba(113, 143, 213, .34), transparent 40%),
+        radial-gradient(ellipse at 72% 88%, rgba(132, 178, 164, .3), transparent 42%),
+        linear-gradient(145deg, #d6deeb 0%, #ccddda 48%, #ddd3e2 100%);
+    background-attachment: fixed;
+}
+.nav.scrolled { box-shadow: 0 6px 24px rgb(11 27 54 / .045); }
+.hero h1 { text-wrap: balance; }
+.hero .lead { line-height: 1.8; }
+:where(.feature-card, .step-card, .testimonial-card) { border-radius: 18px; }
+
+/* Found-items header: keep it open, but carry the same tinted glass palette. */
+.page-top {
+    background: linear-gradient(120deg, rgba(255,255,255,.42), rgba(255,255,255,.12));
+    border-bottom: 1px solid rgba(160,175,210,.22);
+}
+.pub-search input, .pub-toolbar select {
+    background-color: rgba(255,255,255,.88);
+    backdrop-filter: blur(12px);
+}
+.pub-count { color: var(--ink-2); }
+
+/* Authentication pages */
+.auth-page {
+    background:
+        radial-gradient(ellipse at 92% 12%, rgba(113,143,213,.22), transparent 34%),
+        radial-gradient(ellipse at 78% 92%, rgba(132,178,164,.18), transparent 38%),
+        linear-gradient(145deg, #edf0f5, #e5eceb 58%, #eee9f0);
+}
+.auth-side { background: transparent; }
+.auth-card {
+    border-radius: 22px;
+    background: rgba(255,255,255,.88);
+    border-color: rgba(255,255,255,.86);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+    box-shadow: 0 22px 70px -36px rgb(11 27 54 / .38), 0 2px 8px rgb(11 27 54 / .04);
+}
+@media (max-width: 900px) {
+    .auth-page { grid-template-columns: minmax(0, 1fr); }
+    .auth-brand { min-height: 220px; padding: 40px 20px 32px; }
+    .auth-brand .logo-pin { width: 56px; height: 56px; margin-bottom: 12px; }
+    .auth-brand h2 { font-size: 26px; }
+    .auth-brand::before, .auth-brand::after { top: 50%; }
+    .auth-side { align-items: flex-start; padding: 24px 16px; }
+}
+.auth-card h1 { text-wrap: balance; }
+.auth-side { background-image: radial-gradient(ellipse at 12% 12%, rgb(255 255 255 / .42), transparent 42%); }
+
+/* App shell */
+.sidebar { box-shadow: 8px 0 30px -28px rgb(0 0 0 / .65); }
+.sidebar-logo { min-height: 48px; }
+.sidebar-nav .nav-link { border-radius: 11px; margin-block: 2px; }
+.sidebar-nav .nav-link.active { box-shadow: inset 3px 0 0 rgb(255 255 255 / .55); }
+.topbar { box-shadow: 0 1px 0 rgb(11 27 54 / .015); }
+.topbar-context { font-weight: 650; letter-spacing: -.025em; }
+.dashboard-content { width: 100%; }
+.page-header h1, .page-header-row h1 { text-wrap: balance; }
+.page-header p { max-width: 68ch; line-height: 1.7; }
+
+/* Panels and summary cards */
+.content-card, .stat-card, .form-card, .item-card, .detail-card {
+    border-radius: var(--r-lg);
+}
+.content-card { box-shadow: var(--sh-1); }
+.content-card-header { gap: 14px; }
+.stat-card { min-width: 0; }
+.stat-card h3, .stat-info h3 { font-variant-numeric: tabular-nums; letter-spacing: -.04em; }
+.item-card { overflow: hidden; }
+.item-card-img img { transition: transform .45s cubic-bezier(.2,.75,.25,1); }
+.item-card:hover .item-card-img img { transform: scale(1.035); }
+.empty-state { line-height: 1.75; }
+
+/* Data tables: improve scanning without changing table markup */
+.table-scroll { max-width: 100%; overflow-x: auto; }
+table { border-collapse: separate; border-spacing: 0; }
+thead th { white-space: nowrap; }
+tbody tr { transition: background-color .16s ease; }
+tbody tr:hover { background: color-mix(in srgb, var(--accent, var(--brand)) 3%, white); }
+td, th { vertical-align: middle; }
+
+/* Status labels should remain legible and not depend on color alone */
+.status { font-weight: 650; letter-spacing: .005em; }
+
+/* Dialogs, menus and toasts */
+dialog, .cd-box, .user-menu { border-radius: 20px; }
+.toast { backdrop-filter: blur(12px); }
+
+/* Responsive refinements */
+@media (max-width: 900px) {
+    .dashboard-content { padding-top: 26px; }
+    .topbar { min-height: 64px; }
+}
+@media (max-width: 600px) {
+    .page-header { margin-bottom: 20px; }
+    .page-header h1, .page-header-row h1 { font-size: clamp(23px, 6vw, 28px); }
+    .content-card-header { padding-inline: 18px; }
+    .content-card-body { padding-inline: 18px; }
+    .stats-grid { gap: 12px; }
+    .btn { min-height: 42px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .item-card-img img { transition: none; }
+}

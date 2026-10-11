@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Found Items - Campus Lost &amp; Found</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/forms.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/polish.css">
+</head>
+<body class="theme-user">
+<div class="dashboard-layout">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-logo"><i data-logo></i><span class="logo-text"><small>Campus</small>Lost &amp; Found</span></div>
+        <nav class="sidebar-nav" aria-label="Main">
+            <a href="dashboard.html" class="nav-link"><i data-icon="home"></i><span>Dashboard</span></a>
+            <p class="nav-section">Report</p>
+            <a href="report-lost.html" class="nav-link"><i data-icon="file-plus"></i><span>Report Lost</span></a>
+            <a href="report-found.html" class="nav-link"><i data-icon="search-check"></i><span>Report Found</span></a>
+            <p class="nav-section">Find</p>
+            <a href="browse-found.html" class="nav-link active"><i data-icon="search"></i><span>Browse Found</span></a>
+            <p class="nav-section">My activity</p>
+            <a href="my-lost-items.html" class="nav-link"><i data-icon="list"></i><span>Lost Reports</span></a>
+            <a href="my-found-items.html" class="nav-link"><i data-icon="box"></i><span>Found Reports</span></a>
+            <a href="claims.html" class="nav-link"><i data-icon="shield-check"></i><span>My Claims</span></a>
+            <p class="nav-section">Account</p>
+            <a href="profile.html" class="nav-link"><i data-icon="user"></i><span>Profile</span></a>
+        </nav>
+        <div class="sidebar-bottom"><button type="button" class="nav-link" data-logout><i data-icon="logout"></i><span>Log out</span></button></div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="topbar">
+            <div class="topbar-left"><button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu"><i data-icon="menu"></i></button></div>
+            <div class="user-profile" role="button" aria-expanded="false" aria-haspopup="true">
+                <img src="../../assets/img/avatar-ahmed.svg" alt="User avatar" id="profileAvatar">
+                <div class="user-info"><span class="user-name">Ahmad Jahanzaib</span><span class="user-role">Member</span></div>
+                <i data-icon="chevron-down"></i>
+            </div>
+        </header>
+
+        <section class="dashboard-content">
+            <div class="page-hero">
+                <div class="page-hero-icon"><i data-icon="box"></i></div>
+                <div>
+                    <h1>Browse Found Items</h1>
+                    <p>Browse items handed in to campus security. If you spot yours, submit a claim with details only the owner would know.</p>
+                </div>
+            </div>
+
+            <!-- Enhanced Search & Filter Toolbar -->
+            <div class="find-toolbar">
+                <div class="search-box">
+                    <i data-icon="search"></i>
+                    <input type="text" id="searchInput" placeholder="Search by item title, brand, or location..." aria-label="Search found items">
+                </div>
+                <div class="cat-select">
+                    <i data-icon="grid"></i>
+                    <select class="form-control" id="catFilter" data-categories data-all aria-label="Filter by category">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Dynamic Grid Container populated via MongoDB Fetch / browse.js -->
+            <div class="item-grid stagger" id="foundGrid" aria-live="polite">
+                <!-- Skeleton loader states rendered instantly before client-side hydration -->
+                <div class="skeleton-card" aria-hidden="true"><div class="sk sk-img"></div><div class="sk sk-line w60"></div><div class="sk sk-line w40"></div><div class="sk sk-line w30"></div><div class="sk sk-btn"></div></div>
+                <div class="skeleton-card" aria-hidden="true"><div class="sk sk-img"></div><div class="sk sk-line w60"></div><div class="sk sk-line w40"></div><div class="sk sk-line w30"></div><div class="sk sk-btn"></div></div>
+                <div class="skeleton-card" aria-hidden="true"><div class="sk sk-img"></div><div class="sk sk-line w60"></div><div class="sk sk-line w40"></div><div class="sk sk-line w30"></div><div class="sk sk-btn"></div></div>
+                <div class="skeleton-card" aria-hidden="true"><div class="sk sk-img"></div><div class="sk sk-line w60"></div><div class="sk sk-line w40"></div><div class="sk sk-line w30"></div><div class="sk sk-btn"></div></div>
+            </div>
+
+            <!-- Secure Claim Dialog Modal -->
+            <dialog id="claimDialog">
+                <form id="claimForm">
+                    <div class="claim-item">
+                        <div class="item-card-img claim-img" id="claimImg"></div>
+                        <div><h2 id="claimTitle"></h2><p id="claimMeta"></p></div>
+                    </div>
+                    <p class="sub">Help us verify ownership. Describe a unique mark, serial number, or specific contents that only the owner would know.</p>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="claimMessage">Proof of Ownership <span class="req">*</span></label>
+                        <textarea class="form-control" id="claimMessage" name="message" rows="4" placeholder="e.g., Keychain has a blue Lego brick attached, lock screen image is a black cat..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="claimPhoto">Supporting Photo (optional)</label>
+                        <input class="form-control" type="file" id="claimPhoto" name="image" accept="image/*">
+                        <span class="field-hint">Add a receipt or matching photo if you have one.</span>
+                    </div>
+
+                    <div class="dialog-actions">
+                        <button type="button" class="btn btn-outline" id="claimCancel">Cancel</button>
+                        <button type="submit" class="btn btn-blue" id="claimSubmit">
+                            <span>Submit Claim</span>
+                            <i data-icon="send"></i>
+                        </button>
+                    </div>
+                </form>
+            </dialog>
+        </section>
+    </main>
+</div>
+
+<script src="../../js/icons.js"></script>
+<script src="../../js/data.js"></script>
+<script src="../../js/campus.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/browse.js"></script>
+<script src="../../js/motion.js"></script>
+</body>
+</html>
